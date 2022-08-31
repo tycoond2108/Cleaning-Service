@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+:root{
+    
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+*::selection{
+    background:#333;
+    color:var(--yellow);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--yellow);
+}
+
+section{
+    padding:1rem 5%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.7rem 2.5rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    color:#333;
+    background:var(--yellow);
+    position: relative;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    height: 100%;
+    width:100%;
+    clip-path: polygon(0 0, 100% 0, 10% 25%, 0 100%);
+    z-index: -1;
+    background:#444;
+    transition: .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+.btn:hover:before{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.btn:hover{
+    color:var(--yellow);
+}
+.products .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.products .box-container .box{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border:.1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    padding:1rem;
+    margin:1.5rem;
+    flex:0.5 0 30rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.products .box-container .box img{
+    width:15rem;
+    margin: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.products .box-container .box .content{
+    padding:1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.products .box-container .box .content .info h3{
+    font-size: 2rem;
+    color:#333;
+    padding:.5rem 0;
+}
+
+.products .box-container .box .content .info{
+    font-size: 2rem;
+    padding: 2rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    margin:1.5rem;
+    color:#666;
+}
+.products .box-container .box .available{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin:1.5rem;
+    justify-content: space-between;
+}
+
+    /************************PACKAGES SECTION********************/
+    .packages .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap:2rem;
+      }
+      
+      .packages .box-container .box{
+        /*flex:1 1 30rem;*/
+        border-radius: .5rem;
+        overflow: hidden;
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+      }
+      
+      .packages .box-container .box img{
+        height: 24rem;
+        width:100%;
+        object-fit: cover;
+      }
+      
+      .packages .box-container .box .content{
+        padding:2rem;
+      }
+      
+      .packages .box-container .box .content h3{
+        font-size:2rem;
+        color:#333;
+      }
+      
+      .packages .box-container .box .content h3 i{
+        color:var(--orange);
+      }
+      
+      .packages .box-container .box .content p{
+        
+        font-size:1.7rem;
+        color:#505d67;
+        padding:1rem 0;
+      }
+      
+      .packages .box-container .box .content .stars i{
+        font-size:1.7rem;
+        color:var(--orange);
+      }
+      
+      .packages .box-container .box .content .price{
+        font-size: 2rem;
+        color:#333;
+        padding-top: 1rem;
+      }
+
+      .heading{
+        text-align: center;
+        padding:2.5rem 0
+      }
+      
+      .heading span{
+        font-size: 4rem;
+        background:var(--light);
+        color:var(--orange);
+        border-radius: .5rem;
+        padding:.2rem 1rem;
+      }
+
+      .heading span.space{
+        background:none;
+      }
+/* media queries  */
+
+@media (max-width:991px){
+.products .box-container .box{
+    flex-flow: column;
+}
+
+.products .box-container .box img{
+    width:30rem;
+    flex-flow: column;
+}
+
+.products .box-container .box .content{
+width: auto;
+}
+
+.heading span{
+    font-size: 2.5rem;
+  }
+}

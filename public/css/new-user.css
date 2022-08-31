@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+:root{
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+*::selection{
+    background:#333;
+    color:var(--yellow);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.3rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--yellow);
+}
+
+section{
+    padding:1rem 5%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.7rem 2.5rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    color:#333;
+    background:var(--yellow);
+    position: relative;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    height: 100%;
+    width:100%;
+    clip-path: polygon(0 0, 100% 0, 10% 25%, 0 100%);
+    z-index: -1;
+    background:#444;
+    transition: .3s cubic-bezier(.38,1.15,.7,1.12);
+}
+
+.btn:hover:before{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.btn:hover{
+    color:var(--yellow);
+}
+
+.heading{
+    text-align: center;
+    padding:1rem;
+    color:#333;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+    font-size: 3rem;
+    padding-top: 8rem;
+}
+
+.heading i{
+    padding:0 .5rem;
+    color:var(--yellow);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.form-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0.5rem 2rem;
+    padding: 0.5rem 3rem;
+    flex: 1 1 40rem;
+}
+.form-container form{
+margin-left: 5rem;
+margin-right: 5rem;
+width: 100%;
+}
+.form-container input,.form-container select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:hover ,select:hover {
+    border: 1px solid #FCDD26;
+}
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    margin: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;  
+    width: fit-content;
+}
+input[type=checkbox] {
+width: 2%;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: 2rem;
+    color: #444;
+}
+
+    .label {
+    margin-top: 6px;
+}
+.field {
+    margin-top: 6px;
+}
+.field p{
+    font-size: 1.5rem;
+    color: #45a049;
+    margin-left: 3rem;
+}
+.row{
+width: 100%;
+}
+
+  /* Clear floats after the columns */
+
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .label, .field, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
